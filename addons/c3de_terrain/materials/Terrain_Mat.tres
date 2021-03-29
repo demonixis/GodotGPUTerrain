@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=11 format=2]
+
+[ext_resource path="res://example/textures/Raw/Grass.jpg" type="Texture" id=1]
+[ext_resource path="res://example/textures/heightmap.jpg" type="Texture" id=2]
+[ext_resource path="res://example/textures/Raw/Grass_Normal.jpg" type="Texture" id=3]
+[ext_resource path="res://example/textures/Raw/Rock_Normal.jpg" type="Texture" id=4]
+[ext_resource path="res://example/textures/Raw/Sand_Normal.jpg" type="Texture" id=5]
+[ext_resource path="res://example/textures/Raw/Sand.jpg" type="Texture" id=6]
+[ext_resource path="res://example/textures/Raw/Rock.jpg" type="Texture" id=7]
+[ext_resource path="res://example/textures/Raw/Snow_Normal.jpg" type="Texture" id=8]
+[ext_resource path="res://example/textures/Raw/Snow.jpg" type="Texture" id=9]
+[ext_resource path="res://addons/c3de_terrain/shaders/TerrainGPU.shader" type="Shader" id=10]
+
+[resource]
+shader = ExtResource( 10 )
+shader_param/weightness = Vector3( 0.25, 0.654, 0.963 )
+shader_param/textureTiling = Vector2( 6, 6 )
+shader_param/heightMultiplier = 1.0
+shader_param/startHeight = 0.5
+shader_param/roughness = 0.9
+shader_param/heightTexture = ExtResource( 2 )
+shader_param/grassTexture = ExtResource( 1 )
+shader_param/grassNormal = ExtResource( 3 )
+shader_param/rockTexture = ExtResource( 7 )
+shader_param/rockNormal = ExtResource( 4 )
+shader_param/sandTexture = ExtResource( 6 )
+shader_param/sandNormal = ExtResource( 5 )
+shader_param/snowTexture = ExtResource( 9 )
+shader_param/snowNormal = ExtResource( 8 )

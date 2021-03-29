@@ -1,0 +1,74 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "AtmScatter",
+"language": "GDScript",
+"path": "res://addons/jc.godot.universal-sky/Code/Sky/AtmScatter.gd"
+}, {
+"base": "Reference",
+"class": "DateTimeUtil",
+"language": "GDScript",
+"path": "res://addons/jc.godot.universal-sky/Code/Util/DateTimeUtil.gd"
+}, {
+"base": "Reference",
+"class": "OrbitalElements",
+"language": "GDScript",
+"path": "res://addons/jc.godot.universal-sky/Code/TimeOfDay/OrbitalElements.gd"
+}, {
+"base": "Node",
+"class": "SkyManager",
+"language": "GDScript",
+"path": "res://addons/jc.godot.universal-sky/Code/Sky/SkyManager.gd"
+}, {
+"base": "Reference",
+"class": "SkyMath",
+"language": "GDScript",
+"path": "res://addons/jc.godot.universal-sky/Code/Util/SkyMath.gd"
+}, {
+"base": "Node",
+"class": "TimeOfDay",
+"language": "GDScript",
+"path": "res://addons/jc.godot.universal-sky/Code/TimeOfDay/TimeOfDay.gd"
+} ]
+_global_script_class_icons={
+"AtmScatter": "",
+"DateTimeUtil": "",
+"OrbitalElements": "",
+"SkyManager": "",
+"SkyMath": "",
+"TimeOfDay": ""
+}
+
+[application]
+
+config/name="TerrainPorted"
+run/main_scene="res://example/Terrain.tscn"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/c3de_terrain/plugin.cfg", "res://addons/jc.godot.universal-sky/plugin.cfg" )
+
+[gdnative]
+
+singletons=[ "res://addons/godot-oculus/godot_oculus.gdnlib" ]
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/filters/msaa=2
+quality/filters/use_fxaa=true
+quality/filters/use_debanding=true
+environment/default_environment="res://default_env.tres"

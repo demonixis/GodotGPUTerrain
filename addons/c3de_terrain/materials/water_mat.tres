@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=2]
+
+[ext_resource path="res://addons/c3de_terrain/shaders/water.shader" type="Shader" id=1]
+[ext_resource path="res://example/textures/Water/water.jpg" type="Texture" id=2]
+[ext_resource path="res://example/textures/Water/Water_Normal.jpg" type="Texture" id=3]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/textureTiling = Vector2( 32, 32 )
+shader_param/alpha = 1.0
+shader_param/roughness = 0.0
+shader_param/startOffset = 0.0
+shader_param/waterTexture = ExtResource( 2 )
+shader_param/waterNormal = ExtResource( 3 )

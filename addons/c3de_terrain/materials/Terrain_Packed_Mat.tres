@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://addons/c3de_terrain/shaders/TerrainGPU_Packed.shader" type="Shader" id=1]
+[ext_resource path="res://example/textures/Packed/Terrain_Albedos.jpg" type="Texture" id=2]
+[ext_resource path="res://example/textures/heightmap.jpg" type="Texture" id=3]
+[ext_resource path="res://example/textures/Packed/Terrain_Normals.jpg" type="Texture" id=4]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/heightMultiplier = 1.0
+shader_param/startHeight = 0.5
+shader_param/weightness = Vector3( 0.25, 0.646, 0.85 )
+shader_param/roughness = 0.9
+shader_param/heightTexture = ExtResource( 3 )
+shader_param/albedosTexture = ExtResource( 2 )
+shader_param/normalsTexture = ExtResource( 4 )
